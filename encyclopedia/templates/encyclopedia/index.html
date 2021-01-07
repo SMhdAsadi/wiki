@@ -4,10 +4,18 @@
     Encyclopedia
 {% endblock %}
 
+{% block nav %}
+    <h3>Welcome!</h3>
+    <p class="introduction">
+        Encyclopedia is a wikipedia like website where you and your friends can easily
+        share your information with each other, with help of markdown.
+    </p>
+{% endblock %}
+
 {% block body %}
     <h1>All Pages</h1>
 
-    <ul>
+    <ul class="entries">
         {% for entry in entries %}
             <li><a href="{% url 'encyclopedia:entry' title=entry %}">{{ entry }}</a></li>
         {% endfor %}

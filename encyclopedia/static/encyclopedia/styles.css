@@ -3,27 +3,28 @@ body {
     background-color: #fafafa;
 }
 
-code {
-    white-space: pre;
-}
-
 h1 {
     margin-top: 0px;
     padding-top: 20px;
 }
 
 textarea {
-    height: 70vh;
-    width: 70%;
+    height: 50vh;
+    width: 90%;
 }
 
-form > *
-{
+form > * {
     margin-bottom: 1em;
 }
 
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
 .main {
-    padding: 10px;
+    padding: 20px;
+    width: 100%;
 }
 
 .search {
@@ -33,12 +34,13 @@ form > *
     border-radius: 5px;
     font-size: 15px;
     line-height: 15px;
+    text-align: center;
 }
 
 .sidebar {
     background-color: #f0f0f0;
     height: 100vh;
-    padding: 20px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +50,53 @@ form > *
     margin-top: 5px;
 }
 
-.sidebar > *
-{
-    margin-bottom: 20px;
+.sidebar > ul {
+    text-align: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sidebar .btn {
+    width: 60%;
+    margin: 0.5em;
+}
+
+.introduction {
+    margin: 0.5em 1.5em 1.5em 1.5em;    
+}
+
+.entries {
+    list-style-type: square;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.entries li:nth-child(even) a {
+    color: indigo;
+}
+
+.entries li:nth-child(odd) a {
+    color: dodgerblue;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        height: unset;
+        width: 100%;
+        padding: 0;
+    }
+
+    .search {
+        width: 80vw;
+        height: 2em;
+        font-size: 1.5em;
+    }
+
+    .sidebar .btn {
+        width: 80vw;
+    }
+
+    #container {
+        flex-direction: column;
+    }
 }

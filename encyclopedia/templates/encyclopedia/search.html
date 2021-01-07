@@ -3,8 +3,8 @@
 {% block title %}{{ Search }}{% endblock %}
 
 {% block body %}
-    <h2>Search Result</h2>
-    <ul>
+    <h2>Search Result for '{{ query }}'</h2>
+    <ul class="entries">
         {% for item in items %}
             <li><a href="{% url 'encyclopedia:entry' title=item %}">{{ item }}</a></li>
         {% empty %}

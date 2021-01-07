@@ -5,6 +5,6 @@
 {% block body %}
     {{ content|safe }}
     <br>
-    <a href="{% url 'encyclopedia:index' %}" class="btn btn-primary">Go To Home</a>
-    <a href="{% url 'encyclopedia:edit' title=title %}" class="btn btn-success">Edit This Page</a>
+    <a href="{% url 'encyclopedia:index' %}" class="btn btn-outline-dark">Go To Home</a>
+    <a href="{% url 'encyclopedia:edit' title=title %}" class="btn btn-outline-success">Edit This Page</a>
 {% endblock %}
